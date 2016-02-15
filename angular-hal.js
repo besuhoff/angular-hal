@@ -3,12 +3,10 @@
 angular.module('angular-hal', [])
 
 .service('halClient', [
-    '$http', '$q', '$window',
+    '$http', '$q',
     function (
-        $http, $q, $window
+        $http, $q
     ) {
-        var rfc6570 = $window.rfc6570;
-
         this.$get = function (href, options) {
             return callService('GET', href, options);
         }; //get
